@@ -94,7 +94,6 @@
             font-weight: 600;
             margin-left: 6px;
         }
-
         /* Pricing Grid */
         .pricing-grid {
             display: grid;
@@ -244,7 +243,6 @@
         .plan-cta-ghost:hover {
             background: rgba(255,255,255,0.1);
         }
-
         /* FAQ / Features comparison */
         .comparison-section {
             padding: 0 24px 100px;
@@ -285,7 +283,6 @@
         }
         .faq-item.open .faq-a { display: block; }
         .faq-item.open .icon { transform: rotate(45deg); opacity: 1; }
-
         /* Animations */
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-16px); }
@@ -295,7 +292,6 @@
             from { opacity: 0; transform: translateY(24px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         @media (max-width: 900px) {
             .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
             .pro-hero-title { font-size: 2.5rem; }
@@ -303,7 +299,6 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar scrolled" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">Critick</a>
@@ -322,9 +317,7 @@
             <button class="hamburger" aria-label="Menu">☰</button>
         </div>
     </nav>
-
     <main>
-        <!-- Hero -->
         <section class="pro-hero">
             <div class="container">
                 <div class="pro-badge">✦ Critick Pro</div>
@@ -336,11 +329,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Pricing Cards -->
         <div class="pricing-grid">
-
-            <!-- Free Plan -->
             <div class="pricing-card">
                 <div class="plan-name">Free</div>
                 <div class="plan-price">₹0<span>/mo</span></div>
@@ -358,8 +347,6 @@
                 </ul>
                 <a href="register.html" class="plan-cta plan-cta-outline">Get Started Free</a>
             </div>
-
-            <!-- Pro Plan (Featured) -->
             <div class="pricing-card featured">
                 <div class="popular-chip">⚡ Most Popular</div>
                 <div class="plan-name">Pro</div>
@@ -378,8 +365,6 @@
                 </ul>
                 <a href="register.html" class="plan-cta plan-cta-primary">Start Pro — Free 7 Days</a>
             </div>
-
-            <!-- Critic Plan -->
             <div class="pricing-card">
                 <div class="plan-name">Critic</div>
                 <div class="plan-price" id="criticPrice"><sup>₹</sup>299<span id="criticPeriod">/mo</span></div>
@@ -398,8 +383,6 @@
                 <a href="register.html" class="plan-cta plan-cta-ghost">Become a Critic</a>
             </div>
         </div>
-
-        <!-- FAQ -->
         <section class="comparison-section">
             <h2 class="comparison-title">Frequently Asked Questions</h2>
             <div class="faq-list">
@@ -426,8 +409,6 @@
             </div>
         </section>
     </main>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -472,7 +453,6 @@
             </div>
         </div>
     </footer>
-
     <script>
         // Billing toggle
         function setBilling(type) {
@@ -486,12 +466,10 @@
                 ? '<sup>₹</sup>2,499<span id="criticPeriod">/yr</span>'
                 : '<sup>₹</sup>299<span id="criticPeriod">/mo</span>';
         }
-
         // FAQ accordion
         function toggleFaq(el) {
             el.classList.toggle('open');
         }
-
         // Navbar scroll
         window.addEventListener('scroll', () => {
             document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);

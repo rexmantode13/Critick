@@ -27,19 +27,14 @@
             <button class="hamburger" aria-label="Menu">☰</button>
         </div>
     </nav>
-
     <main class="container details-layout" style="padding-bottom:80px; padding-top:120px;">
-        <!-- Left: Movie Poster -->
         <aside class="details-poster">
             <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Dune: Part Two Poster" style="width:100%; border-radius:var(--border-radius); border:1px solid var(--border-color);">
             <button class="btn btn-primary" style="width:100%; margin-top:24px; padding:16px;">+ Add to Watchlist</button>
             <button class="btn btn-outline" style="width:100%; margin-top:12px; padding:16px;">Write a Review</button>
         </aside>
-
-        <!-- Right: Movie Info -->
         <section>
             <h1 class="details-title">Dune: Part Two</h1>
-            
             <div class="details-meta">
                 <span class="badge badge-accent">Sci-Fi</span>
                 <span class="badge badge-accent">Adventure</span>
@@ -49,8 +44,6 @@
                 <span>•</span>
                 <span>Directed by Denis Villeneuve</span>
             </div>
-
-            <!-- Rating Panel -->
             <div class="details-rating glass-panel">
                 <div class="rating-score">8.8</div>
                 <div>
@@ -58,16 +51,12 @@
                     <div style="color:var(--text-secondary); font-size:0.9rem;">Based on 12,450 reviews</div>
                 </div>
             </div>
-
-            <!-- Synopsis -->
             <div style="margin-bottom:40px;">
                 <h3 style="margin-bottom:16px; font-size:1.25rem;">Synopsis</h3>
                 <p style="color:var(--text-secondary); line-height:1.8;">
                     Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, he endeavors to prevent a terrible future only he can foresee.
                 </p>
             </div>
-
-            <!-- Cast Section -->
             <div style="margin-bottom:48px;">
                 <h3 style="margin-bottom:24px; font-size:1.25rem;">Top Cast</h3>
                 <div class="cast-grid">
@@ -93,16 +82,12 @@
                     </div>
                 </div>
             </div>
-
-            <!-- User Reviews Section -->
             <div>
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
                     <h3 style="font-size:1.25rem;">User Reviews</h3>
                     <a href="reviews.html" style="color:var(--accent); font-size:0.9rem;">See All Reviews</a>
                 </div>
-
                 <div style="display:flex; flex-direction:column; gap:16px;">
-                    <!-- Review Snippet -->
                     <div class="glass-panel" style="padding:20px;">
                         <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
                             <div style="display:flex; gap:12px; align-items:center;">
@@ -116,8 +101,6 @@
                         </div>
                         <p style="color:var(--text-secondary); font-size:0.95rem;">"An absolute masterpiece of modern cinema. The visual scale and sound design are unparalleled."</p>
                     </div>
-
-                    <!-- Review Snippet -->
                     <div class="glass-panel" style="padding:20px;">
                         <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
                             <div style="display:flex; gap:12px; align-items:center;">
@@ -135,8 +118,6 @@
             </div>
         </section>
     </main>
-
-    <!-- Similar Movies Section -->
     <section class="section-padding" style="background-color:var(--bg-secondary);">
         <div class="container">
             <h2 class="section-title" style="margin-bottom:40px;">Similar Movies</h2>
@@ -164,7 +145,6 @@
             </div>
         </div>
     </section>
-
     <footer class="footer" style="margin-top:0;">
         <div class="container">
             <div class="footer-grid">
@@ -207,7 +187,6 @@
             </div>
         </div>
     </footer>
-
     <script>
         window.addEventListener('scroll', () => {
             document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);

@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Critick | Discover & Rate Movies</title>
-    <!-- CSS Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-
-    <!-- Navbar Component -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">Critick</a>
@@ -31,9 +26,7 @@
             <button class="hamburger" aria-label="Menu">☰</button>
         </div>
     </nav>
-
     <main>
-        <!-- Hero Component -->
         <section class="hero">
             <div class="container" style="display: flex; justify-content: center;">
                 <div class="hero-content" style="text-align: center;">
@@ -47,18 +40,13 @@
                 </div>
             </div>
         </section>
-
-        <!-- Trending Movies Section -->
         <section class="section-padding">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Trending This Week</h2>
                     <a href="movies.html" class="btn btn-outline">View All</a>
                 </div>
-
-                <!-- Movie Grid Component -->
                 <div class="movie-grid">
-                    <!-- Movie Card 0 (New Recent) -->
                     <article class="movie-card" onclick="window.location.href='movie-details.html'">
                         <div class="movie-poster">
                             <img src="https://image.tmdb.org/t/p/w500/iADOJ8Zymht2JPMoy3R7xceZprc.jpg"
@@ -79,8 +67,6 @@
                             </div>
                         </div>
                     </article>
-
-                    <!-- Movie Card 1 -->
                     <article class="movie-card" onclick="window.location.href='movie-details.html'">
                         <div class="movie-poster">
                             <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
@@ -101,8 +87,6 @@
                             </div>
                         </div>
                     </article>
-
-                    <!-- Movie Card 2 -->
                     <article class="movie-card" onclick="window.location.href='movie-details.html'">
                         <div class="movie-poster">
                             <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
@@ -123,8 +107,6 @@
                             </div>
                         </div>
                     </article>
-
-                    <!-- Movie Card 3 -->
                     <article class="movie-card" onclick="window.location.href='movie-details.html'">
                         <div class="movie-poster">
                             <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg"
@@ -145,8 +127,6 @@
                             </div>
                         </div>
                     </article>
-
-                    <!-- Movie Card 4 -->
                     <article class="movie-card" onclick="window.location.href='movie-details.html'">
                         <div class="movie-poster">
                             <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg"
@@ -167,8 +147,6 @@
                             </div>
                         </div>
                     </article>
-
-                    <!-- Movie Card 5 -->
                     <article class="movie-card" onclick="window.location.href='movie-details.html'">
                         <div class="movie-poster">
                             <img src="https://image.tmdb.org/t/p/w500/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg"
@@ -192,8 +170,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Categories Section -->
         <section class="section-padding" style="background-color: var(--bg-secondary);">
             <div class="container">
                 <div class="section-header">
@@ -245,7 +221,6 @@
                 </div>
             </div>
         </section>
-        <!-- Top 10 this week Section -->
         <section class="section-padding">
             <div class="container">
                 <div class="section-header">
@@ -300,8 +275,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Fan favourite Section -->
         <section class="section-padding" style="background-color: var(--bg-secondary);">
             <div class="container">
                 <div class="section-header">
@@ -345,8 +318,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Coming soon to theaters Section -->
         <section class="section-padding">
             <div class="container">
                 <div class="section-header">
@@ -374,15 +345,12 @@
                 </div>
             </div>
         </section>
-
-        <!-- Top Critics Section -->
         <section class="section-padding" style="background-color: var(--bg-secondary);">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Top Critics</h2>
                     <a href="reviews.html" class="btn btn-outline">View All Critics</a>
                 </div>
-
                 <div class="cast-grid" style="grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 24px;">
                     <div class="cast-card glass-panel critic-card"
                         style="padding: 24px; text-align: center; border-radius: var(--border-radius);">
@@ -408,7 +376,6 @@
                 </div>
             </div>
         </section>
-        <!-- Community Reviews Preview Section -->
         <section class="section-padding">
             <div class="container">
                 <div class="section-header">
@@ -416,7 +383,6 @@
                     <a href="reviews.html" class="btn btn-outline">Read More</a>
                 </div>
                 <div class="review-grid">
-                    <!-- Review Card 1 -->
                     <article class="review-card glass-panel">
                         <div class="review-header">
                             <div class="user-avatar-letter">A</div>
@@ -433,8 +399,6 @@
                             will be remembered for decades. The sound design alone deserves every award."
                         </p>
                     </article>
- 
-                    <!-- Review Card 2 -->
                     <article class="review-card glass-panel">
                         <div class="review-header">
                             <div class="user-avatar-letter">P</div>
@@ -451,8 +415,6 @@
                             slow in the third act, but the tension built during the Trinity test sequence was palpable."
                         </p>
                     </article>
- 
-                    <!-- Review Card 3 -->
                     <article class="review-card glass-panel">
                         <div class="review-header">
                             <div class="user-avatar-letter">R</div>
@@ -472,8 +434,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Statistics Section -->
         <section class="section-padding">
             <div class="container">
                 <div class="stats-grid glass-panel" style="padding: 0;">
@@ -497,8 +457,6 @@
             </div>
         </section>
     </main>
-
-    <!-- Footer Component -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -544,13 +502,11 @@
             </div>
         </div>
     </footer>
-
     <script>
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
         });
-
         // Intersection Observer for scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -560,7 +516,5 @@
             observer.observe(el);
         });
     </script>
-
 </body>
-
 </html>
