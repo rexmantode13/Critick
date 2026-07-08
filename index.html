@@ -502,74 +502,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
-        });
-        // Intersection Observer for scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.12 });
-        document.querySelectorAll('.movie-card, .review-card, .category-card, .stat-card, .cast-card').forEach(el => {
-            el.classList.add('fade-in-up');
-            observer.observe(el);
-        });
-        // Interactive Search functionality
-        const searchInput = document.getElementById('hero-search-input');
-        const searchBtn = document.getElementById('hero-search-btn');
-        
-        function handleSearch() {
-            const query = searchInput.value.trim();
-            if (query) {
-                // Add a small loading effect
-                searchBtn.innerHTML = '<span style="opacity:0.7">Searching...</span>';
-                setTimeout(() => {
-                    window.location.href = `movies.html?search=${encodeURIComponent(query)}`;
-                }, 400);
-            } else {
-                searchInput.style.border = '1px solid var(--danger)';
-                setTimeout(() => searchInput.style.border = 'none', 1000);
-            }
-        }
-        
-        searchBtn.addEventListener('click', handleSearch);
-        searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') handleSearch();
-        });
-
-        // Interactive Helpful Buttons
-        document.querySelectorAll('button').forEach(btn => {
-            if(btn.innerText.includes('Helpful')) {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation(); // prevent card click
-                    if(!this.classList.contains('liked')) {
-                        this.classList.add('liked');
-                        this.style.color = 'var(--success)';
-                        this.style.borderColor = 'var(--success)';
-                        this.style.background = 'rgba(34, 197, 94, 0.1)';
-                        // Extract number and increment
-                        const text = this.innerText;
-                        const numMatch = text.match(/\d+/);
-                        if(numMatch) {
-                            const newNum = parseInt(numMatch[0]) + 1;
-                            this.innerHTML = `👍 Helpful (${newNum})`;
-                        }
-                    } else {
-                        this.classList.remove('liked');
-                        this.style.color = 'var(--text-secondary)';
-                        this.style.borderColor = 'var(--border-color)';
-                        this.style.background = 'transparent';
-                        const text = this.innerText;
-                        const numMatch = text.match(/\d+/);
-                        if(numMatch) {
-                            const newNum = parseInt(numMatch[0]) - 1;
-                            this.innerHTML = `👍 Helpful (${newNum})`;
-                        }
-                    }
-                });
-            }
-        });
-    </script>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>

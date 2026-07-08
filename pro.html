@@ -453,27 +453,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        // Billing toggle
-        function setBilling(type) {
-            const isYearly = type === 'yearly';
-            document.getElementById('monthlyBtn').classList.toggle('active', !isYearly);
-            document.getElementById('yearlyBtn').classList.toggle('active', isYearly);
-            document.getElementById('proPrice').innerHTML = isYearly
-                ? '<sup>₹</sup>1,659<span id="proPeriod">/yr</span>'
-                : '<sup>₹</sup>199<span id="proPeriod">/mo</span>';
-            document.getElementById('criticPrice').innerHTML = isYearly
-                ? '<sup>₹</sup>2,499<span id="criticPeriod">/yr</span>'
-                : '<sup>₹</sup>299<span id="criticPeriod">/mo</span>';
-        }
-        // FAQ accordion
-        function toggleFaq(el) {
-            el.classList.toggle('open');
-        }
-        // Navbar scroll
-        window.addEventListener('scroll', () => {
-            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
-        });
-    </script>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>
