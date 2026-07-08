@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies | Critick</title>
+    <meta name="description" content="Browse all movies on Critick. Filter by genre, year, and rating.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Critick</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="movies.html" class="active">Movies</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="movies.html?filter=top-rated">Top Rated</a>
+                <a href="about.html">About</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="pro.html" class="text-accent" style="font-weight:700;">Critick Pro</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Log In</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            <button class="hamburger" aria-label="Menu">☰</button>
+        </div>
+    </nav>
+
+    <main class="container movies-layout">
+        <aside class="filter-sidebar glass-panel" style="padding:24px;">
+            <h2 style="margin-bottom:24px;">Filters</h2>
+            <div class="filter-group">
+                <h3 class="filter-title">Search</h3>
+                <input type="text" class="form-control" placeholder="Search movies...">
+            </div>
+            <div class="filter-group">
+                <h3 class="filter-title">Genres</h3>
+                <label class="checkbox-group"><input type="checkbox" checked><span>Action</span></label>
+                <label class="checkbox-group"><input type="checkbox"><span>Adventure</span></label>
+                <label class="checkbox-group"><input type="checkbox"><span>Animation</span></label>
+                <label class="checkbox-group"><input type="checkbox" checked><span>Sci-Fi</span></label>
+                <label class="checkbox-group"><input type="checkbox"><span>Drama</span></label>
+                <label class="checkbox-group"><input type="checkbox"><span>Horror</span></label>
+            </div>
+            <div class="filter-group">
+                <h3 class="filter-title">Release Year</h3>
+                <select class="form-control">
+                    <option>All Years</option>
+                    <option>2026</option><option>2025</option><option>2024</option>
+                    <option>2023</option><option>2020 - 2022</option><option>Older</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <h3 class="filter-title">Rating</h3>
+                <select class="form-control">
+                    <option>Any Rating</option>
+                    <option>9+ Stars</option><option>8+ Stars</option><option>7+ Stars</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" style="width:100%;">Apply Filters</button>
+        </aside>
+
+        <section>
+            <div class="section-header" style="margin-bottom:24px;">
+                <h1 style="font-size:2rem;">All Movies</h1>
+                <select class="form-control" style="width:200px;">
+                    <option>Sort by: Popularity</option>
+                    <option>Sort by: Rating (High to Low)</option>
+                    <option>Sort by: Newest Release</option>
+                </select>
+            </div>
+
+            <div class="movie-grid">
+                <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Dune: Part Two" loading="lazy">
+                        <div class="movie-rating-badge">★ 8.8</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Dune: Part Two</h3>
+                        <div class="movie-meta"><span>2024</span><span>Sci-Fi</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Oppenheimer" loading="lazy">
+                        <div class="movie-rating-badge">★ 8.4</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Oppenheimer</h3>
+                        <div class="movie-meta"><span>2023</span><span>Drama</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Across the Spider-Verse" loading="lazy">
+                        <div class="movie-rating-badge">★ 8.6</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Across the Spider-Verse</h3>
+                        <div class="movie-meta"><span>2023</span><span>Animation</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="The Batman" loading="lazy">
+                        <div class="movie-rating-badge">★ 7.8</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Batman</h3>
+                        <div class="movie-meta"><span>2022</span><span>Action</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/w500/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg" alt="Everything Everywhere" loading="lazy">
+                        <div class="movie-rating-badge">★ 7.8</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Everything Everywhere</h3>
+                        <div class="movie-meta"><span>2022</span><span>Sci-Fi</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/w500/iADOJ8Zymht2JPMoy3R7xceZprc.jpg" alt="Furiosa" loading="lazy">
+                        <div class="movie-rating-badge">★ 8.2</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Furiosa: A Mad Max Saga</h3>
+                        <div class="movie-meta"><span>2024</span><span>Action</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar" loading="lazy">
+                        <div class="movie-rating-badge">★ 9.0</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Interstellar</h3>
+                        <div class="movie-meta"><span>2014</span><span>Sci-Fi</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg" alt="Inception" loading="lazy">
+                        <div class="movie-rating-badge">★ 8.8</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Inception</h3>
+                        <div class="movie-meta"><span>2010</span><span>Sci-Fi</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="No Time to Die" loading="lazy">
+                        <div class="movie-rating-badge">★ 7.2</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">No Time to Die</h3>
+                        <div class="movie-meta"><span>2021</span><span>Action</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                    <div class="movie-poster">
+                        <img src="images/gladiator-2.jpg" alt="Gladiator II" loading="lazy">
+                        <div class="movie-rating-badge">★ 7.5</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Gladiator II</h3>
+                        <div class="movie-meta"><span>2024</span><span>Drama</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                    <div class="movie-poster">
+                        <img src="images/deadpool-wolverine.jpg" alt="Deadpool & Wolverine" loading="lazy">
+                        <div class="movie-rating-badge">★ 7.9</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Deadpool &amp; Wolverine</h3>
+                        <div class="movie-meta"><span>2024</span><span>Action</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="The Shawshank Redemption" loading="lazy">
+                        <div class="movie-rating-badge">★ 9.3</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Shawshank Redemption</h3>
+                        <div class="movie-meta"><span>1994</span><span>Drama</span></div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="flex justify-center items-center gap-2" style="margin-top:48px; margin-bottom:80px;">
+                <button class="btn btn-outline" disabled>Previous</button>
+                <button class="btn btn-primary">1</button>
+                <button class="btn btn-outline">2</button>
+                <button class="btn btn-outline">3</button>
+                <span style="color:var(--text-secondary);">...</span>
+                <button class="btn btn-outline">12</button>
+                <button class="btn btn-outline">Next</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" style="margin-top:0;">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Critick.</a>
+                    <p class="footer-desc">Your ultimate destination for discovering, tracking, and reviewing the best movies from around the world.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="movies.html">Movies</a>
+                        <a href="reviews.html">Community Reviews</a>
+                        <a href="about.html">About Us</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Categories</h4>
+                    <div class="footer-links">
+                        <a href="#">Action</a><a href="#">Sci-Fi</a>
+                        <a href="#">Drama</a><a href="#">Comedy</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Critick. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+                    <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+        });
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.movie-card').forEach(el => { el.classList.add('fade-in-up'); obs.observe(el); });
+    </script>
+</body>
+</html>

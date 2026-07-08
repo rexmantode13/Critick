@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critick | Discover & Rate Movies</title>
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar Component -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Critick</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="movies.html">Movies</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="movies.html?filter=top-rated">Top Rated</a>
+                <a href="about.html">About</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="pro.html" class="text-accent" style="font-weight: 700;">Critick Pro</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Log In</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            <button class="hamburger" aria-label="Menu">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Component -->
+        <section class="hero">
+            <div class="container" style="display: flex; justify-content: center;">
+                <div class="hero-content" style="text-align: center;">
+                    <h1 class="hero-title">
+                        Discover, Review & Rate Your <span class="text-accent">Favorite Movies</span>
+                    </h1>
+                    <div class="hero-search glass-panel" style="margin: 0 auto;">
+                        <input type="text" placeholder="Search for movies, actors, or genres...">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending Movies Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Trending This Week</h2>
+                    <a href="movies.html" class="btn btn-outline">View All</a>
+                </div>
+
+                <!-- Movie Grid Component -->
+                <div class="movie-grid">
+                    <!-- Movie Card 0 (New Recent) -->
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/iADOJ8Zymht2JPMoy3R7xceZprc.jpg"
+                                alt="Furiosa Poster">
+                            <div class="movie-rating-badge">★ 8.2</div>
+                            <div class="movie-overlay">
+                                <span class="badge badge-accent"
+                                    style="margin-bottom:8px; width:max-content;">Action</span>
+                                <p style="font-size:0.85rem; margin-bottom:12px;">The origin story of renegade warrior
+                                    Furiosa before she teamed up with Mad Max...</p>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Furiosa: A Mad Max Saga</h3>
+                            <div class="movie-meta">
+                                <span>2024</span>
+                                <span>2h 28m</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 1 -->
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
+                                alt="Dune: Part Two Poster">
+                            <div class="movie-rating-badge">★ 8.8</div>
+                            <div class="movie-overlay">
+                                <span class="badge badge-accent"
+                                    style="margin-bottom:8px; width:max-content;">Sci-Fi</span>
+                                <p style="font-size:0.85rem; margin-bottom:12px;">Paul Atreides unites with Chani and
+                                    the Fremen while on a warpath of revenge...</p>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Dune: Part Two</h3>
+                            <div class="movie-meta">
+                                <span>2024</span>
+                                <span>2h 46m</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 2 -->
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+                                alt="Oppenheimer Poster">
+                            <div class="movie-rating-badge">★ 8.4</div>
+                            <div class="movie-overlay">
+                                <span class="badge badge-accent"
+                                    style="margin-bottom:8px; width:max-content;">Drama</span>
+                                <p style="font-size:0.85rem; margin-bottom:12px;">The story of American scientist J.
+                                    Robert Oppenheimer and his role...</p>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Oppenheimer</h3>
+                            <div class="movie-meta">
+                                <span>2023</span>
+                                <span>3h 0m</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 3 -->
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg"
+                                alt="Spider-Man Poster">
+                            <div class="movie-rating-badge">★ 8.6</div>
+                            <div class="movie-overlay">
+                                <span class="badge badge-accent"
+                                    style="margin-bottom:8px; width:max-content;">Animation</span>
+                                <p style="font-size:0.85rem; margin-bottom:12px;">Miles Morales catapults across the
+                                    Multiverse, where he encounters...</p>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Across the Spider-Verse</h3>
+                            <div class="movie-meta">
+                                <span>2023</span>
+                                <span>2h 20m</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 4 -->
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+                                alt="Batman Poster">
+                            <div class="movie-rating-badge">★ 7.8</div>
+                            <div class="movie-overlay">
+                                <span class="badge badge-accent"
+                                    style="margin-bottom:8px; width:max-content;">Action</span>
+                                <p style="font-size:0.85rem; margin-bottom:12px;">When a sadistic serial killer begins
+                                    murdering key political figures...</p>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">The Batman</h3>
+                            <div class="movie-meta">
+                                <span>2022</span>
+                                <span>2h 56m</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 5 -->
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg"
+                                alt="Everything Everywhere Poster">
+                            <div class="movie-rating-badge">★ 7.8</div>
+                            <div class="movie-overlay">
+                                <span class="badge badge-accent"
+                                    style="margin-bottom:8px; width:max-content;">Sci-Fi</span>
+                                <p style="font-size:0.85rem; margin-bottom:12px;">An aging Chinese immigrant is swept up
+                                    in an insane adventure...</p>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Everything Everywhere</h3>
+                            <div class="movie-meta">
+                                <span>2022</span>
+                                <span>2h 19m</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="section-padding" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Explore Categories</h2>
+                </div>
+                <div class="category-grid">
+                    <div class="category-card" onclick="window.location.href='movies.html?genre=action'">
+                        <div class="category-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <div class="category-name">Action</div>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='movies.html?genre=comedy'">
+                        <div class="category-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                        </div>
+                        <div class="category-name">Comedy</div>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='movies.html?genre=horror'">
+                        <div class="category-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 10h.01M15 10h.01M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z"/></svg>
+                        </div>
+                        <div class="category-name">Horror</div>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='movies.html?genre=scifi'">
+                        <div class="category-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09zM12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                        </div>
+                        <div class="category-name">Sci-Fi</div>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='movies.html?genre=drama'">
+                        <div class="category-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 15h8"/><path d="M8 9h2"/><path d="M14 9h2"/></svg>
+                        </div>
+                        <div class="category-name">Drama</div>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='movies.html?genre=thriller'">
+                        <div class="category-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <div class="category-name">Thriller</div>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='movies.html?genre=romance'">
+                        <div class="category-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                        </div>
+                        <div class="category-name">Romance</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Top 10 this week Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Top 10 This Week</h2>
+                    <a href="movies.html" class="btn btn-outline">View All</a>
+                </div>
+                <div class="movie-grid">
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+                                alt="Oppenheimer Poster">
+                            <div class="movie-rating-badge">★ 8.4</div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Oppenheimer</h3>
+                            <div class="movie-meta"><span>2023</span><span>3h 0m</span></div>
+                        </div>
+                    </article>
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
+                                alt="Dune 2 Poster">
+                            <div class="movie-rating-badge">★ 8.8</div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Dune: Part Two</h3>
+                            <div class="movie-meta"><span>2024</span><span>2h 46m</span></div>
+                        </div>
+                    </article>
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+                                alt="Batman Poster">
+                            <div class="movie-rating-badge">★ 7.8</div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">The Batman</h3>
+                            <div class="movie-meta"><span>2022</span><span>2h 56m</span></div>
+                        </div>
+                    </article>
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg"
+                                alt="Spider-Man Poster">
+                            <div class="movie-rating-badge">★ 8.6</div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Across the Spider-Verse</h3>
+                            <div class="movie-meta"><span>2023</span><span>2h 20m</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fan favourite Section -->
+        <section class="section-padding" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Fan Favourite</h2>
+                    <a href="movies.html" class="btn btn-outline">View All</a>
+                </div>
+                <div class="movie-grid">
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg"
+                                alt="Everything Everywhere Poster">
+                            <div class="movie-rating-badge">★ 8.9</div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Everything Everywhere</h3>
+                            <div class="movie-meta"><span>2022</span><span>2h 19m</span></div>
+                        </div>
+                    </article>
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+                                alt="Interstellar Poster">
+                            <div class="movie-rating-badge">★ 9.0</div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Interstellar</h3>
+                            <div class="movie-meta"><span>2014</span><span>2h 49m</span></div>
+                        </div>
+                    </article>
+                    <article class="movie-card" onclick="window.location.href='movie-details.html'">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg"
+                                alt="Inception Poster">
+                            <div class="movie-rating-badge">★ 8.8</div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Inception</h3>
+                            <div class="movie-meta"><span>2010</span><span>2h 28m</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coming soon to theaters Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Coming Soon to Theaters</h2>
+                </div>
+                <div class="movie-grid">
+                    <article class="movie-card">
+                        <div class="movie-poster">
+                            <img src="images/deadpool-wolverine.jpg" alt="Deadpool & Wolverine Poster" loading="lazy">
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Deadpool &amp; Wolverine</h3>
+                            <div class="movie-meta"><span>July 2024</span><span>Action</span></div>
+                        </div>
+                    </article>
+                    <article class="movie-card">
+                        <div class="movie-poster">
+                            <img src="images/gladiator-2.jpg" alt="Gladiator II Poster" loading="lazy">
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Gladiator II</h3>
+                            <div class="movie-meta"><span>Nov 2024</span><span>Drama</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Critics Section -->
+        <section class="section-padding" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Top Critics</h2>
+                    <a href="reviews.html" class="btn btn-outline">View All Critics</a>
+                </div>
+
+                <div class="cast-grid" style="grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 24px;">
+                    <div class="cast-card glass-panel critic-card"
+                        style="padding: 24px; text-align: center; border-radius: var(--border-radius);">
+                        <img src="images/pj-explained.jpg"
+                            alt="PJ Explained" style="width: 80px; height: 80px; margin: 0 auto 16px; border-radius: 50%; object-fit: cover;">
+                        <div class="cast-name" style="font-size: 1rem; margin-bottom: 4px;">PJ Explained</div>
+                        <div style="font-size: 0.8rem; color: var(--accent);">Top Critic • 342 Reviews</div>
+                    </div>
+                    <div class="cast-card glass-panel critic-card"
+                        style="padding: 24px; text-align: center; border-radius: var(--border-radius);">
+                        <img src="images/yogi-bolta-hai.jpg"
+                            alt="Yogi Bolta Hai" style="width: 80px; height: 80px; margin: 0 auto 16px; border-radius: 50%; object-fit: cover;">
+                        <div class="cast-name" style="font-size: 1rem; margin-bottom: 4px;">Yogi Bolta Hai</div>
+                        <div style="font-size: 0.8rem; color: var(--accent);">Top Critic • 289 Reviews</div>
+                    </div>
+                    <div class="cast-card glass-panel critic-card"
+                        style="padding: 24px; text-align: center; border-radius: var(--border-radius);">
+                        <img src="images/bnftv.jpg"
+                            alt="BnfTV" style="width: 80px; height: 80px; margin: 0 auto 16px; border-radius: 50%; object-fit: cover;">
+                        <div class="cast-name" style="font-size: 1rem; margin-bottom: 4px;">BnfTV</div>
+                        <div style="font-size: 0.8rem; color: var(--accent);">Top Critic • 156 Reviews</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Community Reviews Preview Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Recent Community Reviews</h2>
+                    <a href="reviews.html" class="btn btn-outline">Read More</a>
+                </div>
+                <div class="review-grid">
+                    <!-- Review Card 1 -->
+                    <article class="review-card glass-panel">
+                        <div class="review-header">
+                            <div class="user-avatar-letter">A</div>
+                            <div>
+                                <div class="reviewer-name">Arjun Mehta</div>
+                                <div class="review-movie">Reviewed: Dune: Part Two</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            ★★★★★
+                        </div>
+                        <p class="review-text">
+                            "An absolute visual masterpiece. Villeneuve has outdone himself, creating a sci-fi epic that
+                            will be remembered for decades. The sound design alone deserves every award."
+                        </p>
+                    </article>
+ 
+                    <!-- Review Card 2 -->
+                    <article class="review-card glass-panel">
+                        <div class="review-header">
+                            <div class="user-avatar-letter">P</div>
+                            <div>
+                                <div class="reviewer-name">Priya Sharma</div>
+                                <div class="review-movie">Reviewed: Oppenheimer</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            ★★★★☆
+                        </div>
+                        <p class="review-text">
+                            "Incredible performances across the board, especially Cillian Murphy. The pacing was a bit
+                            slow in the third act, but the tension built during the Trinity test sequence was palpable."
+                        </p>
+                    </article>
+ 
+                    <!-- Review Card 3 -->
+                    <article class="review-card glass-panel">
+                        <div class="review-header">
+                            <div class="user-avatar-letter">R</div>
+                            <div>
+                                <div class="reviewer-name">Rohan Verma</div>
+                                <div class="review-movie">Reviewed: The Batman</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            ★★★★☆
+                        </div>
+                        <p class="review-text">
+                            "Loved the noir, detective approach to this iteration. Gotham felt truly grimy and alive.
+                            Pattinson brings a great brooding energy to Bruce Wayne."
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="stats-grid glass-panel" style="padding: 0;">
+                    <div class="stat-card">
+                        <div class="stat-number">15K+</div>
+                        <div class="stat-label">Total Movies</div>
+                    </div>
+                    <div class="stat-card" style="border-left: 1px solid var(--glass-border);">
+                        <div class="stat-number">2M+</div>
+                        <div class="stat-label">User Reviews</div>
+                    </div>
+                    <div class="stat-card" style="border-left: 1px solid var(--glass-border);">
+                        <div class="stat-number">500K</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat-card" style="border-left: 1px solid var(--glass-border);">
+                        <div class="stat-number">4.2</div>
+                        <div class="stat-label">Average Rating</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Critick.</a>
+                    <p class="footer-desc">Your ultimate destination for discovering, tracking, and reviewing the best
+                        movies from around the world.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="movies.html">Movies</a>
+                        <a href="reviews.html">Community Reviews</a>
+                        <a href="about.html">About Us</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Categories</h4>
+                    <div class="footer-links">
+                        <a href="#">Action</a>
+                        <a href="#">Sci-Fi</a>
+                        <a href="#">Drama</a>
+                        <a href="#">Comedy</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Critick. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+                    <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.movie-card, .review-card, .category-card, .stat-card, .cast-card').forEach(el => {
+            el.classList.add('fade-in-up');
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+
+</html>

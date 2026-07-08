@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Critick</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="auth-layout">
+
+    <a href="index.html" class="logo" style="position: absolute; top: 32px; left: 32px; font-size: 1.5rem;">Critick</a>
+
+    <div class="auth-card glass-panel">
+        <div class="auth-header">
+            <h1>Create an Account</h1>
+            <p>Join the community and start reviewing.</p>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label class="form-label" for="fullname">Full Name</label>
+                <input type="text" id="fullname" class="form-control" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="username">Username</label>
+                <input type="text" id="username" class="form-control" placeholder="johndoe_films" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <input type="password" id="password" class="form-control" placeholder="Create a strong password" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" class="form-control" placeholder="Repeat your password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 16px; padding: 14px;">Create Account</button>
+        </form>
+
+        <div style="text-align: center; margin-top: 32px; font-size: 0.9rem; color: var(--text-secondary);">
+            Already have an account? <a href="login.html" style="color: var(--accent); font-weight: 600;">Log in</a>
+        </div>
+    </div>
+
+</body>
+</html>
