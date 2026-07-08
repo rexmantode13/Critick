@@ -1,8 +1,6 @@
 # 🎬 Critick — Movie Review & Rating Website
 
-A modern, fully responsive movie review and rating platform built with **pure HTML, CSS, and JavaScript**. Critick allows users to discover, review, rate, and track their favorite movies in a sleek, dark-themed editorial interface.
-
-> **Live Demo:** _Deploy on [Vercel](https://vercel.com) for instant hosting._
+A Modern, fully responsive Movie Review and Rating platform built with **pure HTML, CSS, and JavaScript**. Critick allows users to discover, review, rate, and track their favorite movies in a sleek, dark - themed Editorial Interface.
 
 ---
 
@@ -85,9 +83,9 @@ This project uses **zero JavaScript frameworks or CSS libraries** — it's built
 
 **Rex Mantode** — Founder & Full-Stack Developer
 
-Passionate about cinema and clean code. Built Critick as a platform where every film lover can find, rate, and talk about the movies they care about.
+Passionate about Cinema ( Marvel ), Gaming and Creativity. Built Critick as a platform where every film lover can find, rate, and talk about the movies they care about.
 
 ---
 
 ## 📜 License
-Available under the [MIT License](LICENSE).
+© 2026 Critick. All rights reserved.
