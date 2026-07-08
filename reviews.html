@@ -128,6 +128,38 @@
         window.addEventListener('scroll', () => {
             document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
         });
+
+        // Interactive Helpful Buttons
+        document.querySelectorAll('button').forEach(btn => {
+            if(btn.innerText.includes('Helpful')) {
+                btn.addEventListener('click', function() {
+                    if(!this.classList.contains('liked')) {
+                        this.classList.add('liked');
+                        this.style.color = 'var(--success)';
+                        this.style.borderColor = 'var(--success)';
+                        this.style.background = 'rgba(34, 197, 94, 0.1)';
+                        // Extract number and increment
+                        const text = this.innerText;
+                        const numMatch = text.match(/\d+/);
+                        if(numMatch) {
+                            const newNum = parseInt(numMatch[0]) + 1;
+                            this.innerHTML = `👍 Helpful (${newNum})`;
+                        }
+                    } else {
+                        this.classList.remove('liked');
+                        this.style.color = 'var(--text-secondary)';
+                        this.style.borderColor = 'var(--border-color)';
+                        this.style.background = 'transparent';
+                        const text = this.innerText;
+                        const numMatch = text.match(/\d+/);
+                        if(numMatch) {
+                            const newNum = parseInt(numMatch[0]) - 1;
+                            this.innerHTML = `👍 Helpful (${newNum})`;
+                        }
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>

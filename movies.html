@@ -32,7 +32,7 @@
             <h2 style="margin-bottom:24px;">Filters</h2>
             <div class="filter-group">
                 <h3 class="filter-title">Search</h3>
-                <input type="text" class="form-control" placeholder="Search movies...">
+                <input type="text" id="sidebar-search" class="form-control" placeholder="Search movies...">
             </div>
             <div class="filter-group">
                 <h3 class="filter-title">Genres</h3>
@@ -58,11 +58,11 @@
                     <option>9+ Stars</option><option>8+ Stars</option><option>7+ Stars</option>
                 </select>
             </div>
-            <button class="btn btn-primary" style="width:100%;">Apply Filters</button>
+            <button id="apply-filters-btn" class="btn btn-primary" style="width:100%;">Apply Filters</button>
         </aside>
         <section>
             <div class="section-header" style="margin-bottom:24px;">
-                <h1 style="font-size:2rem;">All Movies</h1>
+                <h1 id="page-heading" style="font-size:2rem;">All Movies</h1>
                 <select class="form-control" style="width:200px;">
                     <option>Sort by: Popularity</option>
                     <option>Sort by: Rating (High to Low)</option>
@@ -252,6 +252,56 @@
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.movie-card').forEach(el => { el.classList.add('fade-in-up'); obs.observe(el); });
+
+        // Handle Search and Filters
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('search');
+        const genreQuery = urlParams.get('genre');
+        
+        const heading = document.getElementById('page-heading');
+        const searchInput = document.getElementById('sidebar-search');
+        const filterBtn = document.getElementById('apply-filters-btn');
+
+        if (searchQuery) {
+            heading.innerText = `Search Results for "${searchQuery}"`;
+            searchInput.value = searchQuery;
+            // Highlight matching cards simply by checking title
+            document.querySelectorAll('.movie-card').forEach(card => {
+                const title = card.querySelector('.movie-title').innerText.toLowerCase();
+                if (!title.includes(searchQuery.toLowerCase())) {
+                    card.style.display = 'none';
+                }
+            });
+        } else if (genreQuery) {
+            heading.innerText = `${genreQuery.charAt(0).toUpperCase() + genreQuery.slice(1)} Movies`;
+            // Check the corresponding checkbox
+            document.querySelectorAll('.checkbox-group').forEach(group => {
+                const span = group.querySelector('span');
+                const checkbox = group.querySelector('input');
+                if (span && span.innerText.toLowerCase() === genreQuery.toLowerCase()) {
+                    checkbox.checked = true;
+                } else if (checkbox) {
+                    checkbox.checked = false; // uncheck others for single genre view
+                }
+            });
+        }
+
+        filterBtn.addEventListener('click', () => {
+            filterBtn.innerHTML = '<span style="opacity:0.7">Applying...</span>';
+            setTimeout(() => {
+                filterBtn.innerHTML = 'Apply Filters';
+                // Trigger a slight visual refresh
+                document.querySelectorAll('.movie-card').forEach(card => {
+                    if (card.style.display !== 'none') {
+                        card.style.animation = 'none';
+                        card.offsetHeight; /* trigger reflow */
+                        card.style.animation = null; 
+                        card.classList.remove('visible');
+                        setTimeout(() => card.classList.add('visible'), 50);
+                    }
+                });
+            }, 600);
+        });
     </script>
 </body>
 </html>
