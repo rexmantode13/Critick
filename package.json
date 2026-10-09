@@ -1,0 +1,23 @@
+{
+  "name": "critick-root",
+  "version": "1.0.0",
+  "description": "Critick - Dark Minimal Editorial Movie & Web Series Review Platform",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "setup": "node -e \"const fs = require('fs'); if (!fs.existsSync('server/.env')) { fs.copyFileSync('server/.env.example', 'server/.env'); console.log('Copied server/.env.example to server/.env'); } if (!fs.existsSync('client/.env')) { fs.copyFileSync('client/.env.example', 'client/.env'); console.log('Copied client/.env.example to client/.env'); }\" && npm install --prefix server && npm install --prefix client && npm install",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server",
+    "verify:omdb": "node server/src/scripts/verifyOmdb.js",
+    "seed:catalog": "node server/src/seed/seedCatalog.js",
+    "create-admin": "node server/src/scripts/createAdmin.js",
+    "seed:demo": "node server/src/seed/seedDemo.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

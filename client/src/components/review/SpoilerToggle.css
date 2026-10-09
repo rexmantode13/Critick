@@ -1,0 +1,42 @@
+.spoiler-container {
+  padding: var(--space-4);
+  background-color: rgba(200, 99, 75, 0.08);
+  border: 1px dashed rgba(200, 99, 75, 0.4);
+  border-radius: var(--radius-md);
+  margin: var(--space-3) 0;
+}
+
+.spoiler-warning-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.spoiler-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-terracotta);
+  letter-spacing: 1px;
+}
+
+.spoiler-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.reveal-btn {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.reveal-btn:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}

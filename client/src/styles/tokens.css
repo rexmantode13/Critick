@@ -1,0 +1,60 @@
+:root {
+  /* Color Palette - Minimal Dark Editorial */
+  --bg-main: #0e0e0f;
+  --bg-surface: #151517;
+  --bg-card: #1b1b1e;
+  --bg-card-hover: #222226;
+  --bg-elevated: #242428;
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-active: rgba(212, 169, 74, 0.4);
+
+  --text-main: #ece8e1;
+  --text-secondary: #c4c0b7;
+  --text-muted: #9a968f;
+  --text-dim: #64615b;
+
+  --accent-gold: #d4a94a;
+  --accent-gold-hover: #e5b958;
+  --accent-gold-bg: rgba(212, 169, 74, 0.12);
+  
+  --accent-terracotta: #c8634b;
+  --accent-terracotta-hover: #db725a;
+
+  --status-success: #4ea878;
+  --status-error: #e65c5c;
+  --status-warning: #e09f3e;
+
+  /* Typography */
+  --font-display: 'Fraunces', serif;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  /* Elevation / Shadows */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-dropdown: 0 8px 30px rgba(0, 0, 0, 0.7);
+  --shadow-modal: 0 20px 60px rgba(0, 0, 0, 0.85);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -102,7 +102,7 @@ export const ReviewFormModal = ({
       isOpen={isOpen}
       onClose={onClose}
       title={initialReview ? 'Edit Your Review' : `Write Review for ${movieTitle || 'Movie'}`}
-      maxWidth="520px"
+      maxWidth="580px"
     >
       <form onSubmit={handleSubmit} className="review-form">
         {errorMsg && <div className="form-error-alert">{errorMsg}</div>}

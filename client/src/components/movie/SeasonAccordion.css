@@ -1,0 +1,95 @@
+.season-accordion-item {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-card);
+  margin-bottom: var(--space-3);
+  overflow: hidden;
+}
+
+.season-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  color: var(--text-main);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  transition: background-color var(--transition-fast);
+}
+
+.season-accordion-header:hover {
+  background-color: var(--bg-surface);
+}
+
+.accordion-icon {
+  font-size: 1.3rem;
+  color: var(--accent-gold);
+}
+
+.season-accordion-content {
+  padding: 0 var(--space-6) var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface);
+}
+
+.season-loading, .season-empty {
+  padding: var(--space-4);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.episodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.episode-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+}
+
+.ep-number {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+  min-width: 32px;
+}
+
+.ep-details {
+  flex: 1;
+}
+
+.ep-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.ep-date {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.ep-rating {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.ep-rating .star-icon {
+  color: var(--accent-gold);
+}

@@ -11,6 +11,9 @@ export const Footer = () => {
             <Link to="/" className="footer-logo">
               CRITICK
             </Link>
+            <p className="footer-tagline" style={{ marginTop: '12px', color: 'var(--text-muted)', fontSize: '0.9rem', maxWidth: '280px', lineHeight: '1.5' }}>
+              Your home for authentic film discovery and reviews.
+            </p>
           </div>
 
           <div className="footer-nav-col">

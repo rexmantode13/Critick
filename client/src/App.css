@@ -1,0 +1,422 @@
+/* ── App-level layout styles ── */
+
+.layout-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-main {
+  flex: 1;
+  padding-top: 72px; /* navbar height offset */
+}
+
+.page-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-16) var(--space-6);
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Toast notification styles ── */
+
+.toast-container {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 400px;
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-dropdown);
+  color: var(--text-main);
+  font-size: 0.9rem;
+  pointer-events: all;
+  animation: toastSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.toast-success {
+  border-left: 3px solid var(--status-success);
+}
+
+.toast-error {
+  border-left: 3px solid var(--status-error);
+}
+
+.toast-info {
+  border-left: 3px solid var(--accent-gold);
+}
+
+.toast-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+
+.toast-success .toast-icon {
+  color: var(--status-success);
+}
+
+.toast-error .toast-icon {
+  color: var(--status-error);
+}
+
+.toast-info .toast-icon {
+  color: var(--accent-gold);
+}
+
+.toast-message {
+  flex: 1;
+}
+
+.toast-close {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 2px 4px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: color var(--transition-fast);
+}
+
+.toast-close:hover {
+  color: var(--text-main);
+}
+
+/* ── Scroll to top transition ── */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: var(--space-6);
+  left: var(--space-6);
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background-color: var(--accent-gold);
+  color: var(--bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-fast);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background-color: var(--accent-gold-hover);
+  transform: translateY(-2px);
+}
+
+/* ── Auth pages shared styles ── */
+
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 160px);
+  padding: var(--space-8) var(--space-4);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  padding: var(--space-8);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-modal);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.auth-header .logo-wordmark {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-2);
+}
+
+.auth-header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: var(--space-1);
+}
+
+.auth-header p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.95rem;
+}
+
+.auth-error {
+  padding: var(--space-3) var(--space-4);
+  background-color: rgba(230, 92, 92, 0.08);
+  border: 1px solid rgba(230, 92, 92, 0.25);
+  border-radius: var(--radius-md);
+  color: var(--status-error);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.auth-submit-btn {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--bg-main);
+  background-color: var(--accent-gold);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.auth-submit-btn:hover:not(:disabled) {
+  background-color: var(--accent-gold-hover);
+  transform: translateY(-1px);
+}
+
+.auth-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: var(--space-6);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.auth-footer a {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.auth-footer a:hover {
+  color: var(--accent-gold-hover);
+  text-decoration: underline;
+}
+
+/* ── Admin dashboard styles ── */
+
+.admin-page {
+  padding: var(--space-8) 0 var(--space-16);
+}
+
+.admin-page-header {
+  margin-bottom: var(--space-8);
+}
+
+.admin-page-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.admin-page-header p {
+  color: var(--text-muted);
+  margin-top: var(--space-2);
+}
+
+.admin-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: var(--space-2);
+}
+
+.admin-tab {
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.admin-tab.active,
+.admin-tab:hover {
+  color: var(--accent-gold);
+  border-bottom-color: var(--accent-gold);
+}
+
+.admin-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-surface);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.admin-table th {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  font-weight: 700;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--bg-card);
+}
+
+.admin-table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tr:hover td {
+  background-color: var(--bg-card-hover);
+}
+
+.admin-action-btn {
+  padding: var(--space-1) var(--space-3);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.admin-action-btn:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.admin-action-btn.danger {
+  color: var(--status-error);
+}
+
+.admin-action-btn.danger:hover {
+  border-color: var(--status-error);
+  background-color: rgba(230, 92, 92, 0.08);
+}
+
+.admin-empty {
+  padding: var(--space-12);
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* ── 404 Not Found page ── */
+
+.notfound-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: calc(100vh - 200px);
+  padding: var(--space-8) var(--space-4);
+}
+
+.notfound-code {
+  font-family: var(--font-display);
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--accent-gold);
+  line-height: 1;
+  opacity: 0.3;
+}
+
+.notfound-page h1 {
+  font-size: 2rem;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.notfound-page p {
+  color: var(--text-muted);
+  margin-bottom: var(--space-6);
+  max-width: 500px;
+}

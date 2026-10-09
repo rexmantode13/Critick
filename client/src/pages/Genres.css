@@ -1,0 +1,57 @@
+.genres-page-root {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-16);
+}
+
+.genres-header {
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.genres-skeleton-grid, .genres-full-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-6);
+}
+
+.genre-tile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-6);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+}
+
+.genre-tile:hover {
+  border-color: var(--accent-gold);
+  background-color: var(--bg-card-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.genre-tile-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.genre-tile-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.genre-tile-arrow {
+  font-size: 1.4rem;
+  color: var(--accent-gold);
+  transition: transform var(--transition-fast);
+}
+
+.genre-tile:hover .genre-tile-arrow {
+  transform: translateX(4px);
+}
