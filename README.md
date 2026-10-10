@@ -1,8 +1,8 @@
 # 🎬 Critick — Cinematic Discovery, Reviews & Ratings
 
-> A dark, minimal, editorial Movie & Web Series Review and Rating platform on the **MERN stack** (MongoDB, Express, React, Node.js) powered by the **OMDb API**.
+> A Movie & Web Series Review and Rating platform on the **MERN stack** ( MongoDB, Express, React, Node.js ) powered by the **OMDb API**.
 
-Designed at the intersection of a high-end film publication and a modern discovery product: cinematic typography, bespoke design tokens, human-curated reviews, and zero AI-generated aesthetic shortcuts.
+Designed at the intersection of a high-end film publication: Cinematic typography, bespoke design tokens, human-curated reviews, and zero AI-generated aesthetic shortcuts.
 
 ---
 
@@ -153,4 +153,4 @@ npm run dev
 
 
 ## 📜 License
-© 2026 Critick. Designed and built with a passion for cinema.
+© 2026 Critick. Designed and built for Cinema buff.
