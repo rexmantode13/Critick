@@ -2,7 +2,7 @@
 node_modules/
 .pnpm-store/
 
-# Environment files (SENSITIVE - never push)
+# Environment files 
 .env
 .env.local
 .env.development
